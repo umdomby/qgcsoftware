@@ -1,0 +1,70 @@
+/** @file
+ *  @brief MAVLink comm protocol generated from testMessages.xml
+ *  @see http://mavlink.org
+ */
+#pragma once
+#ifndef MAVLINK_TESTMESSAGES_H
+#define MAVLINK_TESTMESSAGES_H
+
+#ifndef MAVLINK_H
+    #error Wrong include order: MAVLINK_TESTMESSAGES.H MUST NOT BE DIRECTLY USED. Include mavlink.h from the same directory instead or set ALL AND EVERY defines from MAVLINK.H manually accordingly, including the #define MAVLINK_H call.
+#endif
+
+#undef MAVLINK_THIS_XML_IDX
+#define MAVLINK_THIS_XML_IDX 0
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// MESSAGE LENGTHS AND CRCS
+
+#ifndef MAVLINK_MESSAGE_LENGTHS
+#define MAVLINK_MESSAGE_LENGTHS {}
+#endif
+
+#ifndef MAVLINK_MESSAGE_CRCS
+#define MAVLINK_MESSAGE_CRCS {{3003, 12, 6, 6, 0, 0, 0}, {3004, 98, 6, 6, 0, 0, 0}}
+#endif
+
+#include "../protocol.h"
+
+#define MAVLINK_ENABLED_TESTMESSAGES
+
+// ENUM DEFINITIONS
+
+
+
+// MAVLINK VERSION
+
+#ifndef MAVLINK_VERSION
+#define MAVLINK_VERSION 1
+#endif
+
+#if (MAVLINK_VERSION == 0)
+#undef MAVLINK_VERSION
+#define MAVLINK_VERSION 1
+#endif
+
+// MESSAGE DEFINITIONS
+#include "./mavlink_msg_bsvt_remote_control_turret.h"
+#include "./mavlink_msg_bsvt_remote_control_turret_2.h"
+
+// base include
+
+
+#undef MAVLINK_THIS_XML_IDX
+#define MAVLINK_THIS_XML_IDX 0
+
+#if MAVLINK_THIS_XML_IDX == MAVLINK_PRIMARY_XML_IDX
+# define MAVLINK_MESSAGE_INFO {MAVLINK_MESSAGE_INFO_BSVT_REMOTE_CONTROL_TURRET, MAVLINK_MESSAGE_INFO_BSVT_REMOTE_CONTROL_TURRET_2}
+# define MAVLINK_MESSAGE_NAMES {{ "BSVT_REMOTE_CONTROL_TURRET", 3003 }, { "BSVT_REMOTE_CONTROL_TURRET_2", 3004 }}
+# if MAVLINK_COMMAND_24BIT
+#  include "../mavlink_get_info.h"
+# endif
+#endif
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
+#endif // MAVLINK_TESTMESSAGES_H
